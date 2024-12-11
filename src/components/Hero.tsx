@@ -44,8 +44,8 @@ const Hero = () => {
               transition={{ delay: 0.8, duration: 0.8 }}
             >
               {[
-                { icon: <Github size={24} />, href: "https://github.com", bg: "bg-gray-800" },
-                { icon: <Linkedin size={24} />, href: "https://linkedin.com", bg: "bg-blue-600" },
+                { icon: <Github size={24} />, href: "https://github.com/BIBEK345/", bg: "bg-gray-800" },
+                // { icon: <Linkedin size={24} />, href: "https://linkedin.com", bg: "bg-blue-600" },
                 { icon: <Mail size={24} />, href: "mailto:bibek.shrestha78@aadimcollege.edu.np", bg: "bg-red-600" }
               ].map((social, index) => (
                 <motion.a

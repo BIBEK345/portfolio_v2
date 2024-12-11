@@ -80,30 +80,7 @@ const Projects = () => {
                     alt={project.title}
                     className="w-full h-full object-cover"
                   />
-                  <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                    <div className="flex space-x-4">
-                      <motion.a 
-                        href={project.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        whileHover={{ scale: 1.1 }}
-                        whileTap={{ scale: 0.95 }}
-                        className="p-2 bg-white rounded-full"
-                      >
-                        <Github className="text-gray-900" size={20} />
-                      </motion.a>
-                      <motion.a 
-                        href={project.demo}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        whileHover={{ scale: 1.1 }}
-                        whileTap={{ scale: 0.95 }}
-                        className="p-2 bg-white rounded-full"
-                      >
-                        <ExternalLink className="text-gray-900" size={20} />
-                      </motion.a>
-                    </div>
-                  </div>
+                
                 </motion.div>
                 <div className="p-6">
                   <h3 className="text-xl font-bold mb-2">{project.title}</h3>
