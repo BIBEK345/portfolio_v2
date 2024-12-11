@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --primary-color: #2563eb;
+  --secondary-color: #1e40af;
+  --text-color: #1f2937;
+  --bg-color: #f9fafb;
+  --card-bg: #ffffff;
+  --transition-speed: 0.3s;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  scroll-behavior: smooth;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+}
+
+section {
+  scroll-margin-top: 4rem;
+}
+
+.nav-link {
+  position: relative;
+  transition: color var(--transition-speed);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: var(--primary-color);
+  transition: width var(--transition-speed);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+.card-hover {
+  transition: transform var(--transition-speed);
+}
+
+.card-hover:hover {
+  transform: translateY(-5px);
+}
