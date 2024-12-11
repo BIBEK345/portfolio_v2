@@ -27,8 +27,7 @@ const Skills = () => {
       category: "Backend",
       items: [
         { name: "PHP", icon: <Server className="w-6 h-6" /> },
-        { name: "MySQL", icon: <Database className="w-6 h-6" /> },
-        { name: "Node.js", icon: <FileCode className="w-6 h-6" /> }
+        { name: "MySQL", icon: <Database className="w-6 h-6" /> }
       ],
       color: "bg-green-500"
     },

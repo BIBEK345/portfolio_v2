@@ -5,21 +5,22 @@ import { ExternalLink, Github } from 'lucide-react';
 const Projects = () => {
   const projects = [
     {
-      title: "Project 1",
-      description: "A web application built with React and Node.js",
+      title: "Sajilo Yatra",
+      description: "A comprehensive tour and travel platform built using PHP and MySQL. The website allows users to easily browse and book personalized tour packages based on their preferred destinations and budget.",
       image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
       github: "https://github.com",
       demo: "https://example.com",
-      tags: ["React", "Node.js", "MongoDB"]
+      tags: ["PHP", "MySQL", "JS"]
     },
     {
-      title: "Project 2",
-      description: "An e-commerce platform using PHP and MySQL",
+      title: "Family Management System",
+      description: "A comprehensive family management platform developed using React for the frontend, Spring Boot for the backend, and PostgreSQL for database management. The system allows families to manage tasks, schedules, and resources efficiently, with features for task assignments, event planning, and budget tracking.",
       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
       github: "https://github.com",
       demo: "https://example.com",
-      tags: ["PHP", "MySQL", "Bootstrap"]
+      tags: ["React", "strapi", ]
     }
+    
   ];
 
   const containerVariants = {
@@ -55,70 +56,72 @@ const Projects = () => {
           Projects
         </motion.h2>
         <motion.div 
-          className="grid md:grid-cols-2 gap-8"
+          className="max-w-6xl mx-auto"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
         >
-          {projects.map((project, index) => (
-            <motion.div
-              key={index}
-              variants={itemVariants}
-              className="bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300"
-              whileHover={{ y: -10 }}
-            >
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 justify-items-center">
+            {projects.map((project, index) => (
               <motion.div
-                className="relative overflow-hidden"
-                whileHover={{ scale: 1.05 }}
-                transition={{ duration: 0.3 }}
+                key={index}
+                variants={itemVariants}
+                className="bg-white rounded-xl shadow-lg overflow-hidden w-full max-w-md transform transition-all duration-300"
+                whileHover={{ y: -10 }}
               >
-                <img 
-                  src={project.image} 
-                  alt={project.title}
-                  className="w-full h-48 object-cover"
-                />
-                <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                  <div className="flex space-x-4">
-                    <motion.a 
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      whileHover={{ scale: 1.1 }}
-                      whileTap={{ scale: 0.95 }}
-                      className="p-2 bg-white rounded-full"
-                    >
-                      <Github className="text-gray-900" size={20} />
-                    </motion.a>
-                    <motion.a 
-                      href={project.demo}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      whileHover={{ scale: 1.1 }}
-                      whileTap={{ scale: 0.95 }}
-                      className="p-2 bg-white rounded-full"
-                    >
-                      <ExternalLink className="text-gray-900" size={20} />
-                    </motion.a>
+                <motion.div
+                  className="relative overflow-hidden aspect-video"
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <img 
+                    src={project.image} 
+                    alt={project.title}
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <div className="flex space-x-4">
+                      <motion.a 
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.95 }}
+                        className="p-2 bg-white rounded-full"
+                      >
+                        <Github className="text-gray-900" size={20} />
+                      </motion.a>
+                      <motion.a 
+                        href={project.demo}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.95 }}
+                        className="p-2 bg-white rounded-full"
+                      >
+                        <ExternalLink className="text-gray-900" size={20} />
+                      </motion.a>
+                    </div>
+                  </div>
+                </motion.div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold mb-2">{project.title}</h3>
+                  <p className="text-gray-600 mb-4">{project.description}</p>
+                  <div className="flex flex-wrap gap-2">
+                    {project.tags.map((tag, idx) => (
+                      <span 
+                        key={idx}
+                        className="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm"
+                      >
+                        {tag}
+                      </span>
+                    ))}
                   </div>
                 </div>
               </motion.div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold mb-2">{project.title}</h3>
-                <p className="text-gray-600 mb-4">{project.description}</p>
-                <div className="flex flex-wrap gap-2">
-                  {project.tags.map((tag, idx) => (
-                    <span 
-                      key={idx}
-                      className="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </motion.div>
-          ))}
+            ))}
+          </div>
         </motion.div>
       </div>
     </section>

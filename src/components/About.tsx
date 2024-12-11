@@ -26,8 +26,13 @@ const About = () => {
             <h3 className="text-xl font-semibold mb-4">Education</h3>
             <div className="mb-4">
               <p className="font-medium">Bachelor of Computer Applications (BCA)</p>
-              <p className="text-gray-600">5th Semester</p>
-              <p className="text-gray-600">Nepal</p>
+              <p className="text-gray-600">5th Semester --current</p>
+              <p className="text-gray-600">Aadim National College</p>
+            </div>
+            <div className="mb-4">
+              <p className="font-medium">Plus Two (+2) </p>
+              <p className="text-gray-600">Management</p>
+              <p className="text-gray-600">Sarbanam College</p>
             </div>
           </div>
         </div>

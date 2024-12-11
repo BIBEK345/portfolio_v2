@@ -46,7 +46,7 @@ const Hero = () => {
               {[
                 { icon: <Github size={24} />, href: "https://github.com", bg: "bg-gray-800" },
                 { icon: <Linkedin size={24} />, href: "https://linkedin.com", bg: "bg-blue-600" },
-                { icon: <Mail size={24} />, href: "mailto:your.email@example.com", bg: "bg-red-600" }
+                { icon: <Mail size={24} />, href: "mailto:bibek.shrestha78@aadimcollege.edu.np", bg: "bg-red-600" }
               ].map((social, index) => (
                 <motion.a
                   key={index}
@@ -69,7 +69,7 @@ const Hero = () => {
             transition={{ duration: 0.8 }}
           >
             <motion.img 
-              src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+              src="/images/bibek.jpg"
               alt="Coding workspace"
               className="rounded-lg shadow-xl"
               whileHover={{ scale: 1.05 }}
