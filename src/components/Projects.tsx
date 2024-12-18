@@ -14,7 +14,7 @@ const Projects = () => {
     },
     {
       title: "Family Management System",
-      description: "A comprehensive family management platform developed using React for the frontend, Spring Boot for the backend, and PostgreSQL for database management. The system allows families to manage tasks, schedules, and resources efficiently, with features for task assignments, event planning, and budget tracking.",
+      description: "A comprehensive family management platform developed using React for the frontend, Spring Boot for the backend, and PostgreSQL for database management.",
       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
       github: "https://github.com",
       demo: "https://example.com",
@@ -45,7 +45,7 @@ const Projects = () => {
   };
 
   return (
-    <section id="projects" className="py-20 bg-white">
+    <section id="projects" className="min-h-screen flex items-center bg-gray-50 dark:bg-gray-900">
       <div className="container mx-auto px-4">
         <motion.h2 
           className="text-3xl font-bold text-center mb-12"
@@ -67,7 +67,7 @@ const Projects = () => {
               <motion.div
                 key={index}
                 variants={itemVariants}
-                className="bg-white rounded-xl shadow-lg overflow-hidden w-full max-w-md transform transition-all duration-300"
+                className="bg-white dark:bg-gray-800 dark:border dark:border-gray-700 rounded-xl shadow-lg p-6 card-hover bg-white rounded-xl shadow-lg overflow-hidden w-full max-w-md transform transition-all duration-300"
                 whileHover={{ y: -10 }}
               >
                 <motion.div

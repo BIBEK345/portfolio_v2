@@ -9,7 +9,7 @@ const About = () => {
   };
 
   return (
-    <section id="about" className="py-20 bg-white">
+    <section id="about" className="min-h-screen flex items-center bg-gray-50 dark:bg-gray-900">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center mb-12">About Me</h2>
         <div className="max-w-3xl mx-auto">
@@ -22,10 +22,10 @@ const About = () => {
             foundation in various programming languages and web technologies. I believe in 
             continuous learning and staying updated with the latest trends in technology.
           </p>
-          <div className="bg-gray-50 p-6 rounded-lg">
+          <div className="text-xl font-semibold mb-4 text-gray-800 dark:text-gray-200">
             <h3 className="text-xl font-semibold mb-4">Education</h3>
             <div className="mb-4">
-              <p className="font-medium">Bachelor of Computer Applications (BCA)</p>
+              <p className="font-medium ">Bachelor of Computer Applications (BCA)</p>
               <p className="text-gray-600">5th Semester --current</p>
               <p className="text-gray-600">Aadim National College</p>
             </div>

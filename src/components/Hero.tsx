@@ -1,27 +1,50 @@
-import React from 'react';
+
 import { motion } from 'framer-motion';
-import { Github, Linkedin, Mail } from 'lucide-react';
+import { Github, Mail } from 'lucide-react';
 
 const Hero = () => {
+  const letterAnimation = {
+    hidden: { opacity: 0, y: 50 },
+    visible: (i) => ({
+      opacity: 1,
+      y: 0,
+      transition: {
+        delay: i * 0.1,
+        duration: 0.5,
+      },
+    }),
+  };
+
+  const name = "Bibek Shrestha".split('');
+
   return (
-    <section id="home" className="min-h-screen flex items-center bg-gray-50">
+    <section id="home" className="min-h-screen flex items-center bg-gray-50 dark:bg-gray-900">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center justify-between">
-          <motion.div 
+          <motion.div
             className="md:w-1/2 mb-8 md:mb-0"
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <motion.h1 
-              className="text-5xl font-bold mb-4"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2, duration: 0.8 }}
+            <motion.h1
+              className="text-5xl font-bold mb-4 flex flex-wrap"
+              initial="hidden"
+              animate="visible"
             >
-              Hi, I'm <span className="text-blue-600">Bibek Shrestha</span>
+              Hi, I'm&nbsp;
+              {name.map((letter, i) => (
+                <motion.span
+                  key={i}
+                  variants={letterAnimation}
+                  custom={i}
+                  className="text-blue-600"
+                >
+                  {letter}
+                </motion.span>
+              ))}
             </motion.h1>
-            <motion.p 
+            <motion.p
               className="text-xl text-gray-600 mb-6"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -29,7 +52,7 @@ const Hero = () => {
             >
               BCA Student & Web Developer
             </motion.p>
-            <motion.p 
+            <motion.p
               className="text-gray-700 mb-8"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -37,7 +60,7 @@ const Hero = () => {
             >
               Passionate about creating web applications and exploring new technologies.
             </motion.p>
-            <motion.div 
+            <motion.div
               className="flex space-x-4"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -45,8 +68,7 @@ const Hero = () => {
             >
               {[
                 { icon: <Github size={24} />, href: "https://github.com/BIBEK345/", bg: "bg-gray-800" },
-                // { icon: <Linkedin size={24} />, href: "https://linkedin.com", bg: "bg-blue-600" },
-                { icon: <Mail size={24} />, href: "mailto:bibek.shrestha78@aadimcollege.edu.np", bg: "bg-red-600" }
+                { icon: <Mail size={24} />, href: "mailto:bibek.shrestha78@aadimcollege.edu.np", bg: "bg-red-600" },
               ].map((social, index) => (
                 <motion.a
                   key={index}
@@ -62,13 +84,13 @@ const Hero = () => {
               ))}
             </motion.div>
           </motion.div>
-          <motion.div 
+          <motion.div
             className="md:w-1/2"
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <motion.img 
+            <motion.img
               src="/images/bibek.jpg"
               alt="Coding workspace"
               className="rounded-lg shadow-xl"

@@ -8,7 +8,7 @@ import Footer from './components/footer';
 
 function App() {
   return (
-    <div className="relative">
+    <div className="min-h-screen bg-white dark:bg-gray-900 text-black-900 dark:text-white-100">
       <Navbar />
       <Hero />
       <About />
