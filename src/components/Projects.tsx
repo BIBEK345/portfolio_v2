@@ -7,7 +7,7 @@ const Projects = () => {
     {
       title: "Sajilo Yatra",
       description: "A comprehensive tour and travel platform built using PHP and MySQL. The website allows users to easily browse and book personalized tour packages based on their preferred destinations and budget.",
-      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+      image: "/images/ghandruk.jpg",
       github: "https://github.com",
       demo: "https://example.com",
       tags: ["PHP", "MySQL", "JS"]
